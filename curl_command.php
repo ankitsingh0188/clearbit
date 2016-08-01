@@ -3,7 +3,7 @@
   // $domain = $_SESSION['domain'];
   // $query = $_SESSION['query'];
 
-  //url to clearbit pospector search
+  //url to clearbit pospector search.
   $url = 'https://prospector.clearbit.com/v1/people/search?domain=techmahindra.com&query=ravi';
   $result = clearbit_httpGet($url);
   $output = json_decode($result,true);
