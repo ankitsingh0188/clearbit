@@ -1,5 +1,5 @@
 <?php
-  include ('info.inc.php');
+  include ('db_config.php');
   $domain=$_POST['domain'];
   $query=$_POST['query'];
 
@@ -13,9 +13,9 @@
       die("Could not select the database : ".mysql_error());
     }
     else{
-    $query = "INSERT into prospector_query values(NULL,'$domain','$query')";
+    $query = "INSERT into prospector_query('domain_name','person_name') values('$domain','$query')";
       if(mysql_query($query)){
-        header("Location: details_form.html");
+        header("Location: curl_command.php");
       }
     }
   mysql_close($dbconn);

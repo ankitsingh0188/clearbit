@@ -1,6 +1,6 @@
 <?php
   $dbname = "clearbit";
   $username = "root";
-  $password = "srijan@123";
+  $password = "root";
   $hostname = "localhost";
 ?>
